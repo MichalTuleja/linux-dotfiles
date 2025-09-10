@@ -7,7 +7,7 @@ set -euo pipefail
 sudo apt install -y git
 
 TMP_DIR=$(mktemp -d -t linuxdotflies.XXXXXX)
-echo "Created temp dir: $tmpdir"
+echo "Created temp dir: $TMP_DIR"
 
 git_download() {
   local repo_url="$1"
