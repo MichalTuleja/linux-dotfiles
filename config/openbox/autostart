@@ -27,11 +27,14 @@ xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.5
 xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Scrolling Pixel Distance" 45
 
 # Hardware tuning
-$BASH_EXEC ~/.config/polybar/scripts/cpu_speed_limit.sh 2400
+#$BASH_EXEC ~/.config/polybar/scripts/cpu_speed_limit.sh 2400
 $PYTHON_EXEC ~/.config/scripts/x11/monitor_hotplug.py &
 
 # Session settings
 picom --config ~/.config/picom/picom.conf & # Compositor
+
+/usr/libexec/xdg-desktop-portal-gtk &
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 $BASH_EXEC ~/.config/scripts/x11/load_wallpaper.sh
 $BASH_EXEC ~/.config/polybar/launch.sh &
