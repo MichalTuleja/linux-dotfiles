@@ -10,3 +10,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/MichalTuleja/linux-dotfi
 bash -c "$(wget https://raw.githubusercontent.com/MichalTuleja/linux-dotfiles/main/install-openbox.sh -O -)"
 ```
 
+## Wayland (Wayfire)
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/MichalTuleja/linux-dotfiles/main/install-wayfire.sh)"
+```
+
+```bash
+bash -c "$(wget https://raw.githubusercontent.com/MichalTuleja/linux-dotfiles/main/install-wayfire.sh -O -)"
+```
