@@ -177,11 +177,8 @@ CONFIG_FILES=(
   scripts/wayland/screenshot-area.sh
   scripts/wayland/screenshot-clipboard.sh
   scripts/wayland/record_screen_intel.sh
-  scripts/wayland/scroll_speed.py
-  scripts/wayland/pick_best_output copy.py
   scripts/wayland/monitor_hotplug.py
   scripts/wayland/screenshot-area-clipboard.sh
-  scripts/wayland/wlr-outputs.py
   scripts/wayland/app_menu.py
   scripts/wayland/pick_best_output.py
   scripts/wayland/switch-audio-sink.sh
