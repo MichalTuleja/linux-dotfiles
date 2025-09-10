@@ -215,6 +215,7 @@ CONFIG_FILES=(
 DOT_FILES=(
   .Xresources
   .tmux.conf
+  .wallpaper
 )
 
 THEME_FILES=(
