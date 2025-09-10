@@ -1,0 +1,39 @@
+[colors.bright]
+black = "#45475a"
+blue = "#89b4fa"
+cyan = "#94e2d5"
+green = "#a6e3a1"
+magenta = "#cba6f7"
+red = "#f38ba8"
+white = "#ffffff"
+yellow = "#f9e2af"
+
+[colors.normal]
+black = "#1e1e2e"
+blue = "#89b4fa"
+cyan = "#94e2d5"
+green = "#a6e3a1"
+magenta = "#cba6f7"
+red = "#f38ba8"
+white = "#cdd6f4"
+yellow = "#f9e2af"
+
+[colors.primary]
+background = "#1e1e2e"
+foreground = "#ffffff"
+
+[keyboard]
+  # Use Win (Super) + C to trigger Copy
+  [[keyboard.bindings]]
+  key = "C"
+  mods = "Super"
+  action = "Copy"
+
+  # Use Win (Super) + V to trigger Paste
+  [[keyboard.bindings]]
+  key = "V"
+  mods = "Super"
+  action = "Paste"
+
+[window]
+dimensions = { columns = 108, lines = 33 }

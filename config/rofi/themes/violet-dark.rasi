@@ -1,0 +1,97 @@
+* {
+  font: "Noto Sans 14";
+  text-color: #ffffff;
+  foreground: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  spacing: 5px;
+  selected-normal-background: #3f3cbb;  /* violet accent */
+  selected-normal-foreground: #ffffff;
+  selected-active-background: #5a56e0;
+  selected-active-foreground: #ffffff;
+  selected-urgent-background: #d16dea;
+  selected-urgent-foreground: #ffffff;
+  padding: 0px;
+  margin: 0px;
+  width: 60ch;
+}
+
+/* Window */
+window {
+  background-color: #1e1e2e;
+  border: 1px;
+  border-color: #3f3cbb;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+/* Main container */
+mainbox {
+  background-color: #1e1e2e;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Search bar */
+inputbar {
+  background-color: #2b2d42;
+  border: 1px;
+  border-radius: 6px;
+  padding: 0px;
+  margin: 0px;
+}
+prompt {
+  background-color: #2b2d42;
+  foreground: #ffffff;
+  padding: 6px;
+}
+entry {
+  padding: 5px;
+  expand: true;
+  background-color: #2b2d42;
+  text-color: @foreground;
+}
+
+/* List view */
+listview {
+  background-color: #1e1e2e;
+  lines: 12;
+  columns: 1;
+  spacing: 6px;
+  padding: 0px;
+  scrollbar: true;
+  border-radius: 6px;
+}
+
+/* Elements */
+element {
+  background-color: #1e1e2e;
+  foreground: #ffffff;
+  margin: 0px;
+  padding: 6px;
+  border-radius: 8px;
+}
+element selected {
+  background-color: #3f3cbb;
+  foreground: #ffffff;
+}
+element normal.active {
+  background-color: #5a56e0;
+  foreground: #ffffff;
+}
+element-text, element-icon {
+  foreground: #ffffff;
+  background-color: transparent;
+  margin: 0px 8px 0px 0px;
+}
+element-icon {
+  size: 1em;
+}
+
+/* Scrollbar */
+scrollbar {
+  background-color: #44475a;
+  handle-color: #bd93f9;
+  border-radius: 3px;
+  width: 9px;
+}

@@ -1,0 +1,47 @@
+/* Global */
+* {
+  font-family: "Noto Sans", "Font Awesome 7 Free", "Font Awesome 7 Free Solid", "FontAwesome", sans-serif;
+  font-size: 14px;
+  color: #d0d0d0;
+}
+
+/* Bar */
+window#waybar {
+  background-color: #000000;
+  /* border-bottom: 2px solid #1d1c24; */
+}
+
+/* Padding for modules you have in this config */
+#clock,
+#memory,
+#battery,
+#pulseaudio,
+#custom-openbox-desktop,
+#custom-ip,
+#custom-cpu_speed,
+#custom-wifi,
+#custom-modem,
+#custom-bluetooth,
+#custom-display,
+#tray {
+  padding: 0 2px;
+}
+
+/* (Optional) tiny padding for the custom separators */
+/* #custom-spacer,
+#custom-space {
+  padding: 0 2px;
+} */
+
+/* Workspaces — only applies if you add the module later */
+#workspaces button {
+  padding: 0 6px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+#workspaces button.focused {
+  background-color: #6a5acd;
+}
+
+/* Muted audio state */
+#pulseaudio.muted { opacity: 0.6; }

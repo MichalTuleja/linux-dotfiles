@@ -1,0 +1,78 @@
+/* ---- Wofi GTK CSS theme: win11-dark-ish ---- */
+
+/* Global text */
+* {
+  font-family: "Noto Sans";
+  font-size: 12pt;
+  color: #ffffff;
+}
+
+/* Window container */
+#window, window {
+  background-color: #1e1e2e;
+  border-radius: 16px;
+  padding: 15px;
+
+  /* make the border visible */
+  border: 1px solid #3f3cbb; /* pick any color you like */
+  /* optional: add a soft outline if you want more contrast */
+  /* box-shadow: 0 0 0 1px rgba(63,60,187,0.35); */
+}
+
+
+/* Outer layout box */
+#outer-box {
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Search bar (Rofi: inputbar) */
+#input {
+  padding: 10px;
+  background-color: #2b2d42;
+  border-radius: 10px;
+  border: 0;
+}
+
+/* Scroller + list (Rofi: listview) */
+#scroll {
+  /* makes rounded corners visible if you tint the scroller background */
+  border-radius: 10px;
+}
+
+/* Each entry (Rofi: element) */
+#entry {
+  padding: 6px;
+  border-radius: 8px;
+  margin: 2px 0;
+  background: transparent;
+}
+
+/* Selected entry (Rofi: element selected) */
+#entry:selected {
+  background-color: #3f3cbb;   /* selected-normal-background */
+  color: #ffffff;
+}
+
+/* Optional “active/urgent” accents aren’t 1:1 in Wofi;
+   feel free to reuse them for hover/focus styles if desired */
+#entry:hover:not(:selected) {
+  background-color: #5a56e0;   /* selected-active-background */
+  color: #ffffff;
+}
+
+/* Scrollbar styling (GTK) */
+scrollbar {
+  background-color: #44475a;
+  border-radius: 5px;
+  min-width: 8px;
+}
+scrollbar slider {
+  background-color: #bd93f9;
+  border-radius: 5px;
+}
+
+/* App icons in drun (when allow_images=true) */
+#img {
+  margin-right: 8px;
+}

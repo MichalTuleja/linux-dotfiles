@@ -1,0 +1,10 @@
+background-color=#1e1e2e
+text-color=#ffffff
+border-color=#3f3cbb
+border-size=2
+border-radius=12
+padding=12
+margin=10
+max-icon-size=48
+font=DejaVu Sans Mono 10
+default-timeout=5000

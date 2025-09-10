@@ -1,0 +1,14 @@
+[global]
+font = DejaVu Sans Mono 10
+background = "#1e1e2e"
+foreground = "#ffffff"
+
+frame_color = "#1e1e2e"        # match background
+separator_color = "#3f3cbb"
+
+padding = 12
+horizontal_padding = 10
+frame_width = 0                # ← disable frame that causes cut corners
+corner_radius = 10
+separator_height = 2          # optional: violet line between title/body
+timeout = 5

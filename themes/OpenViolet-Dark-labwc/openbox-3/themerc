@@ -1,0 +1,54 @@
+! ~/.themes/OpenViolet-Dark/openbox-3/themerc  (Labwc-friendly)
+
+! Base chrome
+window.handle.width: 0
+window.client.padding.width: 0
+window.client.padding.height: 0
+
+! Backgrounds
+window.*.title.bg: Solid Flat
+window.*.*.bg: Parentrelative
+window.*.title.bg.color: #2a2a40
+window.*.title.separator.color: #2a2a40
+
+! Borders
+window.active.border.color:   #7f5af0
+window.inactive.border.color: #2a2a40
+border.width: 1
+
+! Labels & buttons
+window.inactive.label.text.color:      #bbbbbb
+window.inactive.button.*.image.color:  #bbbbbb
+window.active.label.text.color:        #eeeeee
+window.active.button.*.image.color:    #eeeeee
+
+! Optional: tighten titlebar content
+! window.button.width: 18
+! window.button.height: 18
+! window.button.spacing: 2
+! window.label.text.justify: Left
+
+! Menus
+menu.*.bg: Solid Flat
+menu.*.bg.color: #2a2a40
+menu.*.text.color: #bbbbbb
+menu.border.width: 2
+menu.border.color: #e6e6e6      ! was {{ alt_white }}
+menu.overlap.x: -10
+menu.overlap.y: 0
+menu.separator.padding.height: 3
+menu.separator.color: #ffffff    ! was {{ white }}
+
+! OSD (On-screen display)
+osd.border.color: #7f5af0        ! was {{ openbox.active.border }}
+osd.border.width: 1              ! was {{ openbox.border }}
+osd.label.text.color: #000000    ! was {{ black }}
+
+! Padding & font
+padding.width: 2
+padding.height: 2
+font: Sans-Serif-10
+
+! Optional rounded look (theme-level decoration layout)
+title.layout: NDLC
+title.separator.color: #3a3a55

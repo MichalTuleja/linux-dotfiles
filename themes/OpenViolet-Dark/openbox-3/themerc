@@ -1,0 +1,67 @@
+# ~/.themes/OpenViolet-Dark/openbox-3/themerc
+
+! Base colors
+window.handle.width: 0
+window.client.padding.width: 0
+window.client.padding.height: 0
+
+window.*.title.bg: Solid Flat
+window.*.*.bg: Parentrelative
+window.*.title.bg.color: #2a2a40
+window.*.title.separator.color: #2a2a40
+window.inactive.label.text.color: #bbbbbb
+window.inactive.button.*.image.color: #bbbbbb
+window.active.border.color:      #7f5af0
+window.inactive.border.color:    #2a2a40
+window.active.label.text.color: #eeeeee
+window.active.button.*.image.color: #eeeeee
+
+# window.active.title.bg:          #cc669c
+# window.active.title.bg.color:    #2a2a40
+# window.active.title.bg.gradient: vertical
+# window.active.title.text.color:  #bbbbbb
+
+# window.inactive.title.bg:        #2a2a40
+# window.inactive.title.bg.color:  #2a2a40
+# window.inactive.title.bg.gradient: vertical
+# window.inactive.title.text.color: #bbbbbb
+
+
+
+# menu.title.bg:                   #1e1e2e
+# menu.title.text.color:           #bbbbbb
+# menu.items.bg:                   #2a2a40
+# menu.items.text.color:           #bbbbbb
+# menu.items.active.bg:            #7f5af0
+# menu.items.active.text.color:    #bbbbbb
+# menu.border.color:               #7f5af0
+
+# Set menu colors
+menu.*.bg: Solid Flat
+menu.*.bg.color: #2a2a40
+menu.*.text.color: #bbbbbb
+
+# Add some padding
+menu.border.width: 2
+menu.border.color: {{ alt_white }}
+
+# Add some submenu padding
+menu.overlap.x: -10
+menu.overlap.y: 0
+
+# Add padding between items
+menu.separator.padding.height: 3
+menu.separator.color: {{ white }}
+
+osd.border.color: {{ openbox.active.border }}
+osd.border.width: {{ openbox.border }}
+osd.label.text.color: {{ black }}
+
+border.width: 2
+padding.width: 2
+padding.height: 2
+font: Sans-Serif-10
+
+! Optional (rounded look)
+title.layout: NDLC
+title.separator.color: #3a3a55

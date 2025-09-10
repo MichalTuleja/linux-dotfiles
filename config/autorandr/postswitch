@@ -1,0 +1,4 @@
+#!/bin/sh
+polybar-msg cmd restart
+bash ~/.config/scripts/x11/load_wallpaper.sh
+notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE" "$AUTORANDR_MONITORS"

@@ -1,0 +1,12 @@
+configuration {
+  font: "Noto Sans 12";
+  show-icons: false;
+  case-sensitive: false;
+  location: 0;
+  width: 16;
+  mouse-accept-entry: true;
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "!MousePrimary";
+}
+
+@theme "themes/violet-dark.rasi"

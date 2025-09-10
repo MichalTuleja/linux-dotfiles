@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# These are OS-specific
+BASH_EXEC=/bin/bash
+PYTHON_EXEC=/usr/bin/python3
+
+xrdb -merge ~/.Xresources       # load X resources
+
+# Keyboard configuration
+#setxkbmap -layout 'pl' # fallback if custom not available
+xkbcomp ~/.config/pl_de_custom_caps_lock.xkb $DISPLAY # Custom keyboard layout
+xset r rate 350 25                # Keyboard repeat rate
+
+# TouchPad configuration
+# Important: perform calibration before adjusting
+#   sudo libinput measure touchpad-size 115x61
+#   sudo systemd-hwdb update
+#  Restart system
+xinput --set-prop "ELAN0676:00 04F3:3195 Touchpad" "libinput Accel Speed" 0.4
+xinput --set-prop "ELAN0676:00 04F3:3195 Touchpad" "libinput Accel Profile Enabled" 1, 0, 0
+xinput --set-prop "ELAN0676:00 04F3:3195 Touchpad" "libinput Scrolling Pixel Distance" 25
+xinput --set-prop "ELAN0676:00 04F3:3195 Touchpad" "libinput Tapping Enabled" 1
+xinput --set-prop "ELAN0676:00 04F3:3195 Touchpad" "libinput Natural Scrolling Enabled" 1
+
+# TrackPoint configuration
+xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.5
+xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Scrolling Pixel Distance" 45
+
+# Hardware tuning
+$BASH_EXEC ~/.config/polybar/scripts/cpu_speed_limit.sh 2400
+$PYTHON_EXEC ~/.config/scripts/x11/monitor_hotplug.py &
+
+# Session settings
+picom --config ~/.config/picom/picom.conf & # Compositor
+
+$BASH_EXEC ~/.config/scripts/x11/load_wallpaper.sh
+$BASH_EXEC ~/.config/polybar/launch.sh &
+nm-applet &                       # NetworkManager
+redshift &
+dunst &
+
+# Update screen to match the monitor setup
+autorandr --change
+
+# Monitor sleep
+xset +dpms
+xset dpms 360 390 600
+
+# Lock screen # TODO: add relevant script
+# xss-lock --transfer-sleep-lock -- i3lock --noindicator -c 000000 &
+# xss-lock --transfer-sleep-lock -- light-locker-command --lock &
+
+# Run Chrome with extra flags
+google-chrome-stable \
+  --enable-features=AcceleratedVideoEncoder,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL \
+  --ignore-gpu-blocklist \
+  --disable-gpu-driver-bug-workaround &

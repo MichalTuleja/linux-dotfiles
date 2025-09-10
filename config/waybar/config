@@ -1,0 +1,146 @@
+{
+  // Bar
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  // Order
+  "modules-left": [
+    // "wlr/workspaces", "custom/spacer",
+    "custom/hostname", "custom/spacer",
+    "custom/cpu_speed", "custom/spacer",
+    "memory"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/wifi", "custom/spacer",
+    "custom/modem", "custom/spacer",
+    "pulseaudio", "custom/spacer",
+    "battery", "custom/spacer",
+    "custom/bluetooth", "custom/space",
+    "custom/display", "custom/spacer",
+    "tray"
+  ],
+
+  // ── Modules ───────────────────────────────────────────────────────────────────
+  // "custom/openbox-desktop": {
+  //   "exec": "~/.config/waybar/scripts/ob_current_desktop.sh",
+  //   "interval": 1,
+  //   "format": " {}",
+  //   "on-click": "rofi -show window -config ~/.config/rofi/apps.rasi",
+  //   "on-click-right": "rofi -show drun -config ~/.config/rofi/apps.rasi"
+  // },
+
+  "custom/hostname": {
+    "exec": "hostname",
+    "interval": 0,
+    "format": " {}",
+    "tooltip": "sh -c \"hostname -I | awk '{print $1}'\"",
+    "onclick": "~/.config/labwc/scripts/app_menu.py"
+  },
+
+  "ext/workspaces": {
+    "format": "W: {name}",          // shows the workspace's name; set names to 1,2,3… in labwc to get numbers
+    // "sort-by-number": true,
+    // "active-only": true,         // show only the current desktop
+    "on-click": "activate"       // click to switch (keeps it useful if you later show all)
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%a %Y-%m-%d %H:%M}"
+  },
+
+  "custom/ip": {
+    "exec": "sh -c \"hostname -I | awk '{print $1}'\"",
+    "interval": 10,
+    "format": " {}",
+    "tooltip": false
+  },
+
+  "memory": {
+    "interval": 3,
+    "tooltip": false,
+    "format": " {used:.2f} GB ({percentage}%) |  {swapUsed:.2f} GB ({swapPercentage}%)",
+    "on-click": "gnome-system-monitor"
+  },
+
+  "custom/cpu_speed": {
+    "exec": "~/.config/waybar/scripts/cpu_speed.sh",
+    "tooltip": false,
+    "interval": 2,
+    "format": "{}",
+    "on-click": "~/.config/waybar/scripts/cpu_speed_toggle.sh 2400"
+  },
+
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "states": { "warning": 20, "critical": 10 },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": " {capacity}%"
+  },
+
+  "custom/display": {
+    "interval": "once",
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/labwc/scripts/monitor_layout_menu.py",
+    "on-click-right": "wdisplays"
+  },
+
+  "custom/monitor_hotplug": {
+    "exec": "/home/michal/.config/labwc/scripts/pick_best_output.py --apply",
+    "interval": 2,
+    "format": "{}",
+    "tooltip": false,
+    "on-click": "~/.config/labwc/scripts/monitor-layout-menu.py",
+    "on-click-right": "wdisplays"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " {volume}%",
+    "format-icons": ["", "", ""],
+    "on-click": "~/.config/labwc/scripts/switch-audio-sink.sh",
+    "on-click-middle": "pavucontrol",
+    "scroll-step": 0
+  },
+
+  "custom/wifi": {
+    "exec": "~/.config/waybar/scripts/wifi.sh",
+    "interval": 3,
+    "tooltip": false,
+    "format": "{}",
+    "on-click": "bash -c ~/.config/waybar/scripts/wifi-picker.sh",
+    "on-click-right": "nm-connection-editor"
+  },
+
+  "custom/modem": {
+    "exec": "~/.config/waybar/scripts/lte.sh",
+    "interval": 3,
+    "tooltip": false,
+    "format": "{}",
+    "on-click": "alacritty -e /bin/bash -c \"~/.config/scripts/modem_read_sms.sh | less\"",
+    "on-click-right": "nm-connection-editor"
+  },
+
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth.sh",
+    "interval": 3,
+    "tooltip": false,
+    "format": "{}",
+    "on-click-right": "blueman-manager"
+  },
+
+  "tray": {
+    "spacing": 6
+  },
+
+  // separators
+  "custom/spacer": { "format": " | ", "tooltip": false },
+  "custom/space":  { "format": " ",   "tooltip": false }
+}
