@@ -49,8 +49,8 @@ PACKAGES=(
   redshift
   dunst
   openbox
+  polybar
   picom
-  tmux
   arandr
   feh
   xss-lock
@@ -70,6 +70,7 @@ PACKAGES=(
   build-essential
   ffmpeg
   zsh
+  tmux
   xdg-desktop-portal
   xdg-desktop-portal-gnome
   xdg-desktop-portal-gtk
