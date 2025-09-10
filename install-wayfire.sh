@@ -87,6 +87,7 @@ PACKAGES=(
   thunar-volman
   python3
   python3-pyudev
+  iw
   modemmanager
   libmbim-utils
   intel-gpu-tools

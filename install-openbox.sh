@@ -56,6 +56,7 @@ PACKAGES=(
   xss-lock
   maim
   rofi
+  wmctrl
   adwaita-icon-theme
   dmz-cursor-theme
   dosfstools
@@ -83,6 +84,7 @@ PACKAGES=(
   thunar-volman
   python3
   python3-pyudev
+  iw
   modemmanager
   libmbim-utils
   intel-gpu-tools
