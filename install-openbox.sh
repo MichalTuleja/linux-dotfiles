@@ -76,6 +76,10 @@ PACKAGES=(
   xdg-desktop-portal
   xdg-desktop-portal-gnome
   xdg-desktop-portal-gtk
+  policykit-1
+  policykit-1-gnome
+  policykit-desktop-privileges
+  polkitd
   vlc
   smplayer
   thunar
