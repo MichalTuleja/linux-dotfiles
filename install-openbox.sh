@@ -124,6 +124,8 @@ copy_files() {
   shift 2
   local files=("$@")
 
+  echo "Copying files from '$src_dir' to '$dest_dir'."
+
   # Check source directory
   if [[ ! -d "$src_dir" ]]; then
     echo "Error: source directory '$src_dir' does not exist." >&2
@@ -145,7 +147,7 @@ copy_files() {
       if [[ -e "$dest" ]]; then
         echo "Skipping (already exists): $dest"
       else
-        cp -v -- "$src" "$dest"
+        cp -- "$src" "$dest"
       fi
     else
       echo "Warning: missing source file -> $src" >&2
@@ -157,8 +159,6 @@ CONFIG_FILES=(
   gtk-3.0/settings.ini
   alacritty/alacritty.toml
   openbox/rc.xml
-  openbox/scripts/record_screen_intel.sh
-  openbox/scripts/monitor_hotplug.py
   openbox/rc.xml.example
   openbox/environment
   openbox/autostart
@@ -232,3 +232,5 @@ mkdir -p "$DEST_TMP_DIR"
 copy_files "./dotfiles" "$DEST_TMP_DIR" "${DOT_FILES[@]}"
 copy_files "./config" "$DEST_TMP_DIR/.config" "${CONFIG_FILES[@]}"
 copy_files "./themes" "$DEST_TMP_DIR/.themes" "${THEME_FILES[@]}"
+
+echo 'All done.'
