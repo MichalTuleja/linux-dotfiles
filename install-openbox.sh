@@ -55,6 +55,7 @@ PACKAGES=(
   feh
   xss-lock
   maim
+  rofi
   adwaita-icon-theme
   dmz-cursor-theme
   dosfstools
