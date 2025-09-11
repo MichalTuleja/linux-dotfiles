@@ -77,7 +77,6 @@ PACKAGES=(
   zsh
   tmux
   xdg-desktop-portal
-  xdg-desktop-portal-gnome
   xdg-desktop-portal-gtk
   policykit-1
   policykit-1-gnome
@@ -215,6 +214,7 @@ CONFIG_FILES=(
   autostart/xfce4-power-manager.desktop
   autostart/im-launch.desktop
   wayfire.ini
+  xdg-desktop-portal/portals.conf
 )
 
 DOT_FILES=(

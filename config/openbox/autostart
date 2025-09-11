@@ -33,8 +33,9 @@ $PYTHON_EXEC ~/.config/scripts/x11/monitor_hotplug.py &
 # Session settings
 picom --config ~/.config/picom/picom.conf & # Compositor
 
-/usr/libexec/xdg-desktop-portal-gtk &
+#/usr/libexec/xdg-desktop-portal-gtk &
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/libexec/gsd-xsettings &
 
 $BASH_EXEC ~/.config/scripts/x11/load_wallpaper.sh
 $BASH_EXEC ~/.config/polybar/launch.sh &
