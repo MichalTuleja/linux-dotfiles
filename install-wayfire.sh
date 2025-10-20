@@ -102,6 +102,7 @@ PACKAGES=(
   ubuntu-wallpapers
   ubuntu-wallpapers-noble
   brightnessctl
+  blueman
 )
 
 # Filter out already installed packages
