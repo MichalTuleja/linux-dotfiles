@@ -189,6 +189,7 @@ CONFIG_FILES=(
   scripts/wayland/switch-audio-sink.sh
   scripts/wayland/monitor_layout_menu.py
   scripts/wayland/screenshot-fullscreen.sh
+  scripts/x11/app_menu.py
   wofi/wifi.config
   wofi/apps.config
   wofi/dark.css
