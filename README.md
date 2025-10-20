@@ -4,6 +4,8 @@
 
 ## Wayfire (Wayland-based)
 
+## Wayfire/Wayland
+
 ### Installation
 
 ```bash
@@ -64,3 +66,38 @@ bash -c "$(wget https://raw.githubusercontent.com/MichalTuleja/linux-dotfiles/ma
 - **Mute**: Toggle mute
 - **BrightnessUp**: Increase screen brightness
 - **BrightnessDown**: Decrease screen brightness
+
+## Gnome/Wayland
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/MichalTuleja/linux-dotfiles/main/install-gnome.sh)"
+```
+
+```bash
+bash -c "$(wget https://raw.githubusercontent.com/MichalTuleja/linux-dotfiles/main/install-gnome.sh -O -)"
+```
+
+### Extra configs for Gnome
+
+#### Remap keyboard
+
+Disable Print Screen
+
+```
+gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "''"
+```
+
+Screenshot area with `Ctrl+Shift+S`
+```
+gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot '<Primary><Shift>s'
+```
+
+Screenshot area with `Win+Shift+S`
+```
+gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot '<Super><Shift>s'
+```
+
+Revert
+```
+gsettings reset org.gnome.settings-daemon.plugins.media-keys area-screenshot
+```
