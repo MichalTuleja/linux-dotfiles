@@ -2,8 +2,6 @@
 
 - Ubuntu-based - tested on Ubuntu 24.04 LTS and Linux Mint 22.1
 
-## Wayfire (Wayland-based)
-
 ## Wayfire/Wayland
 
 ### Installation
