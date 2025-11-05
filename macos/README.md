@@ -101,3 +101,21 @@ nano ~/Library/KeyBindings/DefaultKeyBinding.dict
     "^\r"        = insertNewlineIgnoringFieldEditor:;            // Control + Return
 }
 ```
+
+## Run apps with keyboard shortcuts
+
+```
+brew install koekeishiya/formulae/skhd
+```
+
+
+```
+nano ~/skhdrc
+```
+
+```
+cmd + shift - return : open -na WezTerm
+cmd + alt - return : open -na WezTerm
+cmd + shift - e : open -na "Commander One"
+cmd + shift - t : open -na "Google Chrome" --args --profile-directory="Profile 1" --new-window
+```
