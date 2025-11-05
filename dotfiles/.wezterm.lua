@@ -217,6 +217,9 @@ config.mouse_bindings = mouse_bindings
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 
+config.initial_cols = 108
+config.initial_rows = 39
+
 -- Allow overwriting for work stuff
 if haswork then
   work.apply_to_config(config)
