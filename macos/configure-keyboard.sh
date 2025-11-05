@@ -59,4 +59,4 @@ cat <<EOF > ~/Library/KeyBindings/DefaultKeyBinding.dict
 }
 EOF
 
-echo "Done.Run launchctl load ~/Library/LaunchAgents/com.user.remapkeys.plist to activate"
+echo "Done. Run launchctl load ~/Library/LaunchAgents/com.user.remapkeys.plist to activate"
